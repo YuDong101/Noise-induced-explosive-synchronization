@@ -3,7 +3,7 @@ rng(jjj,'twister');
 
 N_nod=10000;
 
-T_sim=10000; T0=10000; T_tot=T_sim+T0; step=0.1;
+T_sim=10000; T0=10000; T_tot=T_sim+T0; step=0.01;
 time=step:step:T_tot;  Nt=round(T_tot/step);
 
 x_history=0;
@@ -30,3 +30,4 @@ for i=1:Nt
     r(i)=abs(mean(exp(1i*x)));
 end
 r_mean=mean(r(round(T0/step):end));
+
