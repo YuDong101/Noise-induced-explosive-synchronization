@@ -52,8 +52,3 @@ In `main.m`, you can modify the system parameters to reproduce different figures
 * **For Noise-Induced Ordering (Fig 6d):** Change `K1` to `1.8` and ensure the initial condition (`xIni`) corresponds to the incoherent state.
 * **For HON effects (Fig 7):** Set `D1 = 0` and vary `D2` (High-order interaction noise).
 * **For Global Phase Diagrams (Fig 2, 4, 5):** Set up a loop over `K1` and `K2` values.
-
-## 3. Numerical Details
-
-* **Integration Scheme**: The simulation uses a stochastic Euler-Heun method (Predictor-Corrector) to handle the Stratonovich multiplicative noise correctly.
-* **Noise Implementation**: The noise terms $\xi_1(t)$ and $\xi_2(t)$ are implemented as "common noise," meaning the same stochastic fluctuation applies to all oscillators at a given time step, consistent with the mean-field reduction derived in the paper.
